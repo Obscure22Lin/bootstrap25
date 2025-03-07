@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            font-family: "Blackletter", Times, serif;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.pinimg.com/originals/02/87/d3/0287d3ba8b3330fca99f69e2001d3168.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .card {
+            background-color: rgba(58, 59, 59, 0.1);
+            backdrop-filter: blur(3px);
+            border-radius: 15px;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            animation: glow 3s linear infinite;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; border-color: #ff00ff; }
+            25% { box-shadow: 0 0 10px #003cff, 0 0 20px #003cff, 0 0 30px #003cff; border-color: #003cff; }
+            50% { box-shadow: 0 0 10px #9d00f8, 0 0 20px #9d00f8, 0 0 30px #9d00f8; border-color: #9d00f8; }
+            75% { box-shadow: 0 0 10px #003cff, 0 0 20px #003cff, 0 0 30px #003cff; border-color: #003cff; }
+            100% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; border-color: #ff00ff; }
+        }
+
+        h2, label, .btn { color: azure; }
+        .btn { background: linear-gradient(90deg, #cf24db, #330588, #bc13fe, #072a9e, #110246); background-size: 300% 100%; animation: blink 3s linear infinite; }
+
+        @keyframes blink {
+            from { background-position: 0%; }
+            to { background-position: 300% 100%; }
+        }
+
+        .forgot-password {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            margin-right: auto;
+            margin-left: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center">Login</h2>
+                        <form>
+                            <div class="mt-2">
+                                <label for="user-input">Username</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-moon-stars"></i></span>
+                                    <input class="form-control" type="text" placeholder="Enter your Username">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label for="password-input">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-lock"></i></span>
+                                    <input class="form-control" type="password" placeholder="Enter your Password">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-start mt-2">
+                                <div class="forgot-password">
+                                    <a href="#" class="text-light">Forgot your password?</a>
+                                    
+                                </div>
+                                <div class="mt-2">
+                                    <input type="checkbox" id="remember-me"> <label for="remember-me" class="text-light">Remember Me</label>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn w-100">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
